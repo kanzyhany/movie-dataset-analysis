@@ -1,0 +1,104 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0cf54ebb527ad20ea4c1",
+  "position": {
+    "x": 133.25003234690669,
+    "y": 230.15914678102067,
+    "z": 1000,
+    "height": 104.48013899927912,
+    "width": 1043.287185079758,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "BudgetUSD"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.BudgetUSD)",
+              "nativeQueryRef": "Average of BudgetUSD"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "Global_BoxOfficeUSD"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.Global_BoxOfficeUSD)",
+              "nativeQueryRef": "Average of Global_BoxOfficeUSD"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "profit"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.profit)",
+              "nativeQueryRef": "Average of profit"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "movies_dataset"
+                      }
+                    },
+                    "Property": "BudgetUSD"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

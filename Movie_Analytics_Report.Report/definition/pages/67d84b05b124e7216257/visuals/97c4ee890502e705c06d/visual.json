@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "97c4ee890502e705c06d",
+  "position": {
+    "x": 133.25003234690669,
+    "y": 458.80408864900829,
+    "z": 3000,
+    "height": 149.90628639027005,
+    "width": 1043.287185079758,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset"
+                    }
+                  },
+                  "Property": "Director"
+                }
+              },
+              "queryRef": "movies_dataset.Director",
+              "nativeQueryRef": "Director"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset"
+                    }
+                  },
+                  "Property": "ReleaseYear"
+                }
+              },
+              "queryRef": "Sum(movies_dataset.ReleaseYear)",
+              "nativeQueryRef": "ReleaseYear"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset"
+                    }
+                  },
+                  "Property": "LeadActor"
+                }
+              },
+              "queryRef": "movies_dataset.LeadActor",
+              "nativeQueryRef": "LeadActor"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "Opening_Day_SalesUSD"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.Opening_Day_SalesUSD)",
+              "nativeQueryRef": "Average of Opening_Day_SalesUSD"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "One_Week_SalesUSD"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.One_Week_SalesUSD)",
+              "nativeQueryRef": "Average of One_Week_SalesUSD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "movies_dataset"
+                  }
+                },
+                "Property": "ReleaseYear"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "65a1006a75e66e320391",
+  "position": {
+    "x": 131.73582743387368,
+    "y": 334.63928578029982,
+    "z": 2000,
+    "height": 112.05116356444427,
+    "width": 1043.287185079758,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "IMDbRating"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.IMDbRating)",
+              "nativeQueryRef": "Average of IMDbRating"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "Genre"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(movies_dataset.Genre)",
+              "nativeQueryRef": "Genre"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "Country"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(movies_dataset.Country)",
+              "nativeQueryRef": "Country"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "movies_dataset"
+                      }
+                    },
+                    "Property": "IMDbRating"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

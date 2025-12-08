@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1370.6221629171368,
+            "y": 69.059422833493244
+          },
+          "nodeIndex": "movies_dataset",
+          "nodeLineageTag": "2fa6a9b0-fd58-4f63-a156-d4ef92041c26",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 236.11884566698649
+          },
+          "nodeIndex": "DimCountry",
+          "nodeLineageTag": "14162fe7-ce47-422b-a107-6ee4a3f5fab2",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136.6221629171368,
+            "y": 119.05942283349324
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "dfe25a50-0d63-434c-bd37-ab1b825fe799",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.41040181545577,
+            "y": 82.378697769154144
+          },
+          "nodeIndex": "DimGenre",
+          "nodeLineageTag": "ca167b7e-e75f-4fb2-8f59-589438d81fb9",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.202255104609,
+            "y": 85.886687578664379
+          },
+          "nodeIndex": "FactMovies",
+          "nodeLineageTag": "e2b9cb2f-b138-4e2a-877c-ecdfc4bb6e4a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 902.62216291713685,
+            "y": -50
+          },
+          "nodeIndex": "Merge1",
+          "nodeLineageTag": "7b04ff2f-283e-4d00-b0e3-1d84febe5618",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
