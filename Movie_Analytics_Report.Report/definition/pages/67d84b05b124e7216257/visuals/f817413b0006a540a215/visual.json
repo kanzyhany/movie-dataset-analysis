@@ -21,13 +21,29 @@
                   {
                     "value": "Movie Details",
                     "textStyle": {
-                      "fontSize": "28pt"
+                      "fontSize": "28pt",
+                      "color": "#f0f0f0"
                     }
                   }
                 ],
                 "horizontalTextAlignment": "center"
               }
             ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
           }
         }
       ]
