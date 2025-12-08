@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "3d458405d84e20c00b21",
   "position": {
-    "x": 18,
-    "y": 532,
+    "x": 286.66666666666669,
+    "y": 313.33333333333337,
     "z": 3000,
-    "height": 188,
-    "width": 442,
+    "height": 183.33333333333334,
+    "width": 973.33333333333337,
     "tabOrder": 3000
   },
   "visual": {
@@ -66,6 +66,44 @@
               },
               "queryRef": "Sum(movies_dataset.Global_BoxOfficeUSD)",
               "nativeQueryRef": "Sum of Global_BoxOfficeUSD"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "profit"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.profit)",
+              "nativeQueryRef": "Average of profit"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset"
+                        }
+                      },
+                      "Property": "ReleaseYear"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset.ReleaseYear)",
+              "nativeQueryRef": "Average of ReleaseYear"
             }
           ]
         }
@@ -82,10 +120,10 @@
                         "Entity": "movies_dataset"
                       }
                     },
-                    "Property": "Global_BoxOfficeUSD"
+                    "Property": "IMDbRating"
                   }
                 },
-                "Function": 0
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -100,7 +138,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "102D"
+                  "Value": "203.45171998091803D"
                 }
               }
             }
@@ -135,6 +173,26 @@
           },
           "selector": {
             "metadata": "Sum(movies_dataset.Global_BoxOfficeUSD)"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
           }
         }
       ]
