@@ -8,6 +8,8 @@ table FactMovies
 		summarizeBy: count
 		sourceColumn: MovieID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Title
@@ -15,6 +17,8 @@ table FactMovies
 		lineageTag: 751b9dc1-bb9c-41cd-9d24-a45bc140eba1
 		summarizeBy: none
 		sourceColumn: Title
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -24,6 +28,8 @@ table FactMovies
 		summarizeBy: none
 		sourceColumn: Genre
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ReleaseYear
@@ -32,6 +38,8 @@ table FactMovies
 		lineageTag: c2bf38ab-d7d4-4de6-b240-f2846eab0e6a
 		summarizeBy: sum
 		sourceColumn: ReleaseYear
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -47,6 +55,8 @@ table FactMovies
 			relationship: a688138c-1579-4514-8f7c-31b297f61c6a
 			defaultHierarchy: LocalDateTable_26d53fa5-0818-4379-be70-282a585adb45.'Date Hierarchy'
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -57,6 +67,8 @@ table FactMovies
 		summarizeBy: none
 		sourceColumn: Country
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column BudgetUSD
@@ -65,6 +77,8 @@ table FactMovies
 		lineageTag: e0e9fa7d-8904-4bb8-8df6-c449c7f5ad20
 		summarizeBy: sum
 		sourceColumn: BudgetUSD
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -75,6 +89,8 @@ table FactMovies
 		summarizeBy: sum
 		sourceColumn: US_BoxOfficeUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Global_BoxOfficeUSD
@@ -83,6 +99,8 @@ table FactMovies
 		lineageTag: 85fb412f-ac4b-464b-b801-c69073a39160
 		summarizeBy: sum
 		sourceColumn: Global_BoxOfficeUSD
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -93,6 +111,8 @@ table FactMovies
 		summarizeBy: sum
 		sourceColumn: Opening_Day_SalesUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column One_Week_SalesUSD
@@ -102,6 +122,8 @@ table FactMovies
 		summarizeBy: sum
 		sourceColumn: One_Week_SalesUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column IMDbRating
@@ -109,6 +131,8 @@ table FactMovies
 		lineageTag: 0b39bc42-0b0c-4731-b591-bfb6e99518ce
 		summarizeBy: sum
 		sourceColumn: IMDbRating
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -121,6 +145,8 @@ table FactMovies
 		summarizeBy: sum
 		sourceColumn: RottenTomatoesScore
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NumVotesIMDb
@@ -130,6 +156,8 @@ table FactMovies
 		summarizeBy: sum
 		sourceColumn: NumVotesIMDb
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NumVotesRT
@@ -137,6 +165,8 @@ table FactMovies
 		lineageTag: 5dbe9bea-b133-48b2-96ef-2c1c9a26503e
 		summarizeBy: none
 		sourceColumn: NumVotesRT
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -146,6 +176,8 @@ table FactMovies
 		summarizeBy: none
 		sourceColumn: Director
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column LeadActor
@@ -153,6 +185,8 @@ table FactMovies
 		lineageTag: 9720a7a4-f05a-4f02-b96d-72ba218b7ccb
 		summarizeBy: none
 		sourceColumn: LeadActor
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -163,6 +197,8 @@ table FactMovies
 		summarizeBy: sum
 		sourceColumn: profit
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column GenreID
@@ -172,6 +208,8 @@ table FactMovies
 		summarizeBy: count
 		sourceColumn: GenreID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column CountryID
@@ -180,6 +218,8 @@ table FactMovies
 		lineageTag: c8d3ff43-bc2c-4a10-a07e-b4699969ab5a
 		summarizeBy: count
 		sourceColumn: CountryID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

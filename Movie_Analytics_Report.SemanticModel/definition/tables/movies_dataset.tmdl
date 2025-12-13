@@ -8,6 +8,8 @@ table movies_dataset
 		summarizeBy: count
 		sourceColumn: MovieID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Title
@@ -15,6 +17,8 @@ table movies_dataset
 		lineageTag: bb3d90f9-778e-4c06-9fc2-96b9f704e9c8
 		summarizeBy: none
 		sourceColumn: Title
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -24,6 +28,8 @@ table movies_dataset
 		summarizeBy: none
 		sourceColumn: Genre
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ReleaseYear
@@ -32,6 +38,8 @@ table movies_dataset
 		lineageTag: 39bc9ea3-3aa7-4f6f-a976-a8326a252ce2
 		summarizeBy: sum
 		sourceColumn: ReleaseYear
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -47,6 +55,8 @@ table movies_dataset
 			relationship: 60531f36-1b25-4dff-8f72-f9436ebda08e
 			defaultHierarchy: LocalDateTable_5a70b45c-dc1e-4c3b-b5a3-70ca6e4583b8.'Date Hierarchy'
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -57,6 +67,8 @@ table movies_dataset
 		summarizeBy: none
 		sourceColumn: Country
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column BudgetUSD
@@ -64,6 +76,8 @@ table movies_dataset
 		lineageTag: 1e275886-5f5f-4f62-90d3-a0438b043495
 		summarizeBy: sum
 		sourceColumn: BudgetUSD
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -75,6 +89,8 @@ table movies_dataset
 		summarizeBy: sum
 		sourceColumn: US_BoxOfficeUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -84,6 +100,8 @@ table movies_dataset
 		lineageTag: d6c5bb50-9c2b-4ba2-affb-12f4472f12c2
 		summarizeBy: sum
 		sourceColumn: Global_BoxOfficeUSD
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -95,6 +113,8 @@ table movies_dataset
 		summarizeBy: sum
 		sourceColumn: Opening_Day_SalesUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -105,6 +125,8 @@ table movies_dataset
 		summarizeBy: sum
 		sourceColumn: One_Week_SalesUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -114,6 +136,8 @@ table movies_dataset
 		lineageTag: 0b1379c6-f59b-4532-bb6d-dbd8d437a907
 		summarizeBy: sum
 		sourceColumn: IMDbRating
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -126,6 +150,8 @@ table movies_dataset
 		summarizeBy: sum
 		sourceColumn: RottenTomatoesScore
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NumVotesIMDb
@@ -135,6 +161,8 @@ table movies_dataset
 		summarizeBy: sum
 		sourceColumn: NumVotesIMDb
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NumVotesRT
@@ -142,6 +170,8 @@ table movies_dataset
 		lineageTag: 58a68ebb-0261-4a9c-be2c-752fd7615372
 		summarizeBy: none
 		sourceColumn: NumVotesRT
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -151,6 +181,8 @@ table movies_dataset
 		summarizeBy: none
 		sourceColumn: Director
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column LeadActor
@@ -158,6 +190,8 @@ table movies_dataset
 		lineageTag: 48688804-2a10-4f92-a453-6b8e37e76e23
 		summarizeBy: none
 		sourceColumn: LeadActor
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -167,6 +201,8 @@ table movies_dataset
 		lineageTag: bc40545d-b7a4-4e1c-b9c9-d3df168151ae
 		summarizeBy: sum
 		sourceColumn: profit
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

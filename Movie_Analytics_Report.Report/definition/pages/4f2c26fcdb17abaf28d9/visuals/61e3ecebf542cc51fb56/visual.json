@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "61e3ecebf542cc51fb56",
+  "position": {
+    "x": 0,
+    "y": 79.755025961922513,
+    "z": 0,
+    "height": 279.75609106643589,
+    "width": 279.75609106643589,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset (2)"
+                    }
+                  },
+                  "Property": "ReleaseYear"
+                }
+              },
+              "queryRef": "movies_dataset (2).ReleaseYear",
+              "nativeQueryRef": "ReleaseYear",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "Global_BoxOfficeUSD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(movies_dataset (2).Global_BoxOfficeUSD)",
+              "nativeQueryRef": "Sum of Global_BoxOfficeUSD"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "US_BoxOfficeUSD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(movies_dataset (2).US_BoxOfficeUSD)",
+              "nativeQueryRef": "Sum of US_BoxOfficeUSD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "movies_dataset (2)"
+                      }
+                    },
+                    "Property": "Global_BoxOfficeUSD"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

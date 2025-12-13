@@ -36,3 +36,8 @@ relationship 25a77ce2-82f5-4f43-a789-aab2c1858702
 
 	annotation PBI_IsFromSource = FS
 
+relationship a44e80c8-8043-40b6-93bc-a3296764e0ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'movies_dataset (2)'.ReleaseDate
+	toColumn: LocalDateTable_5bdd2c16-8ba3-4e23-a4f5-1dff179b0212.Date
+

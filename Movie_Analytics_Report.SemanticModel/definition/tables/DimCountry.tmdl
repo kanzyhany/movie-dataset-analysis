@@ -8,6 +8,8 @@ table DimCountry
 		summarizeBy: none
 		sourceColumn: MovieID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column CountryName
@@ -15,6 +17,8 @@ table DimCountry
 		lineageTag: f12ba359-56e2-4b28-bc7a-0ffe3dbb7bf0
 		summarizeBy: none
 		sourceColumn: CountryName
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -25,7 +29,22 @@ table DimCountry
 		summarizeBy: none
 		sourceColumn: CountryID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
+
+	column 'Release Year'
+		type: calculated
+		lineageTag: 98737366-6dd1-41ee-a8fb-1cf3ab6f4fd2
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a column name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
 
 	partition DimCountry = m
 		mode: import
@@ -42,6 +61,8 @@ table DimCountry
 				    #"Renamed Columns" = Table.RenameColumns(#"Added Index",{{"Index", "CountryID"}, {"Country", "CountryName"}})
 				in
 				    #"Renamed Columns"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navigation
 

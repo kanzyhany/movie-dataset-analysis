@@ -13,6 +13,8 @@ table DimDate
 			relationship: 663d117e-ace1-480b-9beb-c084ac79836d
 			defaultHierarchy: LocalDateTable_8d5f0ccd-1edc-4dce-b7bd-1f5538c52017.'Date Hierarchy'
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -24,6 +26,8 @@ table DimDate
 		summarizeBy: sum
 		sourceColumn: Year
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column MonthNumber
@@ -33,6 +37,8 @@ table DimDate
 		summarizeBy: sum
 		sourceColumn: MonthNumber
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column MonthName
@@ -41,6 +47,8 @@ table DimDate
 		summarizeBy: none
 		sourceColumn: MonthName
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column YearMonth
@@ -48,6 +56,8 @@ table DimDate
 		lineageTag: f2797514-689d-44dd-a009-d2f95213f0cb
 		summarizeBy: none
 		sourceColumn: YearMonth
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -66,6 +76,8 @@ table DimDate
 				    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "YearMonth", each Date.ToText([ReleaseDate], "yyyy-MM"))
 				in
 				    #"Added Custom"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["movies_dataset","DimDate","DimGenre","DimCountry","Merge1","FactMovies"]
+annotation PBI_QueryOrder = ["movies_dataset","DimDate","DimGenre","DimCountry","Merge1","FactMovies","movies_dataset (2)"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -23,6 +23,8 @@ ref table Merge1
 ref table LocalDateTable_41600b25-6ffb-4d98-af05-973c1eec71cb
 ref table FactMovies
 ref table LocalDateTable_26d53fa5-0818-4379-be70-282a585adb45
+ref table 'movies_dataset (2)'
+ref table LocalDateTable_5bdd2c16-8ba3-4e23-a4f5-1dff179b0212
 
 ref cultureInfo en-US
 

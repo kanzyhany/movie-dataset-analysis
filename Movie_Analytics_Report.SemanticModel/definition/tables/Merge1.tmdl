@@ -8,6 +8,8 @@ table Merge1
 		summarizeBy: count
 		sourceColumn: MovieID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Title
@@ -15,6 +17,8 @@ table Merge1
 		lineageTag: 3d105232-b421-4b89-9177-cb77a594015e
 		summarizeBy: none
 		sourceColumn: Title
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -24,6 +28,8 @@ table Merge1
 		summarizeBy: none
 		sourceColumn: Genre
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ReleaseYear
@@ -32,6 +38,8 @@ table Merge1
 		lineageTag: e01d5026-86d7-4b33-a215-7303eb53ce63
 		summarizeBy: sum
 		sourceColumn: ReleaseYear
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -47,6 +55,8 @@ table Merge1
 			relationship: 8965e265-5c69-4f8b-8618-3c51ba65b950
 			defaultHierarchy: LocalDateTable_41600b25-6ffb-4d98-af05-973c1eec71cb.'Date Hierarchy'
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -57,6 +67,8 @@ table Merge1
 		summarizeBy: none
 		sourceColumn: Country
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column BudgetUSD
@@ -65,6 +77,8 @@ table Merge1
 		lineageTag: 8c44f18d-62b8-4bad-9c42-4edb3587475e
 		summarizeBy: sum
 		sourceColumn: BudgetUSD
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -75,6 +89,8 @@ table Merge1
 		summarizeBy: sum
 		sourceColumn: US_BoxOfficeUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Global_BoxOfficeUSD
@@ -83,6 +99,8 @@ table Merge1
 		lineageTag: 67d65dcf-8f09-4660-a4f6-0ea46457d5bd
 		summarizeBy: sum
 		sourceColumn: Global_BoxOfficeUSD
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -93,6 +111,8 @@ table Merge1
 		summarizeBy: sum
 		sourceColumn: Opening_Day_SalesUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column One_Week_SalesUSD
@@ -102,6 +122,8 @@ table Merge1
 		summarizeBy: sum
 		sourceColumn: One_Week_SalesUSD
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column IMDbRating
@@ -109,6 +131,8 @@ table Merge1
 		lineageTag: cf98b81a-bbc5-4e0c-b9a2-d73393328ed4
 		summarizeBy: sum
 		sourceColumn: IMDbRating
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -121,6 +145,8 @@ table Merge1
 		summarizeBy: sum
 		sourceColumn: RottenTomatoesScore
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NumVotesIMDb
@@ -130,6 +156,8 @@ table Merge1
 		summarizeBy: sum
 		sourceColumn: NumVotesIMDb
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NumVotesRT
@@ -137,6 +165,8 @@ table Merge1
 		lineageTag: 168b8ca2-7411-4cdb-881f-86a6388c9c55
 		summarizeBy: none
 		sourceColumn: NumVotesRT
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -146,6 +176,8 @@ table Merge1
 		summarizeBy: none
 		sourceColumn: Director
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column LeadActor
@@ -153,6 +185,8 @@ table Merge1
 		lineageTag: a8eb0870-bd32-4d47-a8bd-3dc4533ce4e5
 		summarizeBy: none
 		sourceColumn: LeadActor
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -163,6 +197,8 @@ table Merge1
 		summarizeBy: sum
 		sourceColumn: profit
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column GenreID
@@ -171,6 +207,8 @@ table Merge1
 		lineageTag: 80789fa9-0b49-49f3-a6ac-b23d15518a74
 		summarizeBy: count
 		sourceColumn: GenreID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "97bb9588c49dce43581e",
+  "position": {
+    "x": 741.10824124617227,
+    "y": 65.031021168952208,
+    "z": 4000,
+    "height": 279.75609106643589,
+    "width": 538.65317534283054,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "areaChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "movies_dataset (2)"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "ReleaseDate"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Year"
+                }
+              },
+              "queryRef": "movies_dataset (2).ReleaseDate.Variation.Date Hierarchy.Year",
+              "nativeQueryRef": "ReleaseDate Year",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "BudgetUSD"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(movies_dataset (2).BudgetUSD)",
+              "nativeQueryRef": "Average of BudgetUSD"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "Global_BoxOfficeUSD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(movies_dataset (2).Global_BoxOfficeUSD)",
+              "nativeQueryRef": "Sum of Global_BoxOfficeUSD"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset (2)"
+                    }
+                  },
+                  "Property": "ROI"
+                }
+              },
+              "queryRef": "movies_dataset (2).ROI",
+              "nativeQueryRef": "ROI"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "movies_dataset (2)"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "ReleaseDate"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Production Budget vs Revenue Trends'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

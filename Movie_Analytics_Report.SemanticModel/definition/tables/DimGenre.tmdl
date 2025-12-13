@@ -8,6 +8,8 @@ table DimGenre
 		summarizeBy: count
 		sourceColumn: MovieID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column GenreName
@@ -15,6 +17,8 @@ table DimGenre
 		lineageTag: 93be9aba-852d-4587-b5f2-199668ae9276
 		summarizeBy: none
 		sourceColumn: GenreName
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -24,6 +28,8 @@ table DimGenre
 		lineageTag: f9f15bac-f1d7-4d03-aad1-6f67c197b836
 		summarizeBy: count
 		sourceColumn: GenreID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

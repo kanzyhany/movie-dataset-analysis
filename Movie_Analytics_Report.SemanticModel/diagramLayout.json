@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 904.62216291713685,
         "y": 0
       },
       "nodes": [
@@ -80,6 +80,19 @@
           },
           "nodeIndex": "Merge1",
           "nodeLineageTag": "7b04ff2f-283e-4d00-b0e3-1d84febe5618",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1604.6221629171368,
+            "y": 69.059422833493244
+          },
+          "nodeIndex": "movies_dataset (2)",
+          "nodeLineageTag": "767c4a00-8b73-45ab-bcc6-671f6dd1f6c5",
           "size": {
             "height": 300,
             "width": 234
