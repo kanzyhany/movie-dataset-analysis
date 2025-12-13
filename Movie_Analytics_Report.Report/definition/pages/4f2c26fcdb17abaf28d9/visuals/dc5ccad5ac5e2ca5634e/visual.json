@@ -1,0 +1,118 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "dc5ccad5ac5e2ca5634e",
+  "position": {
+    "x": 289.57209426174944,
+    "y": 79.755025961922513,
+    "z": 2000,
+    "height": 279.75609106643589,
+    "width": 442.94714418852351,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "stackedAreaChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset (2)"
+                    }
+                  },
+                  "Property": "ReleaseYear"
+                }
+              },
+              "queryRef": "movies_dataset (2).ReleaseYear",
+              "nativeQueryRef": "ReleaseYear",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "movies_dataset (2)"
+                    }
+                  },
+                  "Property": "Genre"
+                }
+              },
+              "queryRef": "movies_dataset (2).Genre",
+              "nativeQueryRef": "Genre"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "Global_BoxOfficeUSD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(movies_dataset (2).Global_BoxOfficeUSD)",
+              "nativeQueryRef": "Sum of Global_BoxOfficeUSD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "movies_dataset (2)"
+                      }
+                    },
+                    "Property": "Global_BoxOfficeUSD"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Genre Popularity Evolution (1950-2025)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

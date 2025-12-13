@@ -1,0 +1,43 @@
+relationship 60531f36-1b25-4dff-8f72-f9436ebda08e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: movies_dataset.ReleaseDate
+	toColumn: LocalDateTable_5a70b45c-dc1e-4c3b-b5a3-70ca6e4583b8.Date
+
+relationship 663d117e-ace1-480b-9beb-c084ac79836d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.ReleaseDate
+	toColumn: LocalDateTable_8d5f0ccd-1edc-4dce-b7bd-1f5538c52017.Date
+
+relationship 8965e265-5c69-4f8b-8618-3c51ba65b950
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Merge1.ReleaseDate
+	toColumn: LocalDateTable_41600b25-6ffb-4d98-af05-973c1eec71cb.Date
+
+relationship a688138c-1579-4514-8f7c-31b297f61c6a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactMovies.ReleaseDate
+	toColumn: LocalDateTable_26d53fa5-0818-4379-be70-282a585adb45.Date
+
+relationship 1af09d85-6969-4612-b8b8-4d0bd6f9174b
+	fromColumn: Merge1.Genre
+	toColumn: DimGenre.GenreName
+
+	annotation PBI_IsFromSource = FS
+
+relationship 2b40be19-de5b-4f07-b414-7c792be5464e
+	fromColumn: FactMovies.Genre
+	toColumn: DimGenre.GenreName
+
+	annotation PBI_IsFromSource = FS
+
+relationship 25a77ce2-82f5-4f43-a789-aab2c1858702
+	fromColumn: FactMovies.Country
+	toColumn: DimCountry.CountryName
+
+	annotation PBI_IsFromSource = FS
+
+relationship a44e80c8-8043-40b6-93bc-a3296764e0ec
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'movies_dataset (2)'.ReleaseDate
+	toColumn: LocalDateTable_5bdd2c16-8ba3-4e23-a4f5-1dff179b0212.Date
+

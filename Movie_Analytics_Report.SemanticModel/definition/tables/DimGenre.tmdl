@@ -1,0 +1,56 @@
+table DimGenre
+	lineageTag: ca167b7e-e75f-4fb2-8f59-589438d81fb9
+
+	column MovieID
+		dataType: int64
+		formatString: 0
+		lineageTag: c5deba83-a19d-454b-bd69-b20f8fe44bb3
+		summarizeBy: count
+		sourceColumn: MovieID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GenreName
+		dataType: string
+		lineageTag: 93be9aba-852d-4587-b5f2-199668ae9276
+		summarizeBy: none
+		sourceColumn: GenreName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GenreID
+		dataType: int64
+		formatString: 0
+		lineageTag: f9f15bac-f1d7-4d03-aad1-6f67c197b836
+		summarizeBy: count
+		sourceColumn: GenreID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimGenre = m
+		mode: import
+		source =
+				let
+				    Source = movies_dataset,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Title", "ReleaseYear", "ReleaseDate", "Country", "BudgetUSD", "US_BoxOfficeUSD", "Global_BoxOfficeUSD", "Opening_Day_SalesUSD", "One_Week_SalesUSD", "IMDbRating", "RottenTomatoesScore", "NumVotesIMDb", "NumVotesRT", "Director", "LeadActor", "profit"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns", {{"Genre", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Genre"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Genre", type text}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"Genre", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Genre", Text.Clean, type text}}),
+				    #"Removed Blank Rows" = Table.SelectRows(#"Cleaned Text", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Blank Rows", {"Genre"}),
+				    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "Index", 1, 1, Int64.Type),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Index",{{"Index", "GenreID"}, {"Genre", "GenreName"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

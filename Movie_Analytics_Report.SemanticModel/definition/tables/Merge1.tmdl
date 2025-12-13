@@ -1,0 +1,228 @@
+table Merge1
+	lineageTag: 7b04ff2f-283e-4d00-b0e3-1d84febe5618
+
+	column MovieID
+		dataType: int64
+		formatString: 0
+		lineageTag: e9145750-9b97-41ac-99db-a0f492c45a9b
+		summarizeBy: count
+		sourceColumn: MovieID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 3d105232-b421-4b89-9177-cb77a594015e
+		summarizeBy: none
+		sourceColumn: Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genre
+		dataType: string
+		lineageTag: 1968a1f7-3393-4e77-a634-cb208f38769e
+		summarizeBy: none
+		sourceColumn: Genre
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseYear
+		dataType: int64
+		formatString: 0
+		lineageTag: e01d5026-86d7-4b33-a215-7303eb53ce63
+		summarizeBy: sum
+		sourceColumn: ReleaseYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7edc1cc8-da83-4070-adc0-bd97d19a45ee
+		summarizeBy: none
+		sourceColumn: ReleaseDate
+
+		variation Variation
+			isDefault
+			relationship: 8965e265-5c69-4f8b-8618-3c51ba65b950
+			defaultHierarchy: LocalDateTable_41600b25-6ffb-4d98-af05-973c1eec71cb.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Country
+		dataType: string
+		lineageTag: f7e1158a-e092-47d4-bbac-12add0421e18
+		summarizeBy: none
+		sourceColumn: Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudgetUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c44f18d-62b8-4bad-9c42-4edb3587475e
+		summarizeBy: sum
+		sourceColumn: BudgetUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column US_BoxOfficeUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 394752e9-fbd2-4093-ba99-40c8450b06d2
+		summarizeBy: sum
+		sourceColumn: US_BoxOfficeUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Global_BoxOfficeUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 67d65dcf-8f09-4660-a4f6-0ea46457d5bd
+		summarizeBy: sum
+		sourceColumn: Global_BoxOfficeUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Opening_Day_SalesUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 51af4ccc-6d5d-450a-a54b-e18d46bb13b1
+		summarizeBy: sum
+		sourceColumn: Opening_Day_SalesUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column One_Week_SalesUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 05876572-e871-4f5f-9eea-9d978aac8de7
+		summarizeBy: sum
+		sourceColumn: One_Week_SalesUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IMDbRating
+		dataType: double
+		lineageTag: cf98b81a-bbc5-4e0c-b9a2-d73393328ed4
+		summarizeBy: sum
+		sourceColumn: IMDbRating
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RottenTomatoesScore
+		dataType: int64
+		formatString: 0
+		lineageTag: d0696463-d6d4-40fb-97b2-31f76e1607f4
+		summarizeBy: sum
+		sourceColumn: RottenTomatoesScore
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumVotesIMDb
+		dataType: int64
+		formatString: 0
+		lineageTag: b8731be4-834c-4d86-9f3f-053b0faf8464
+		summarizeBy: sum
+		sourceColumn: NumVotesIMDb
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumVotesRT
+		dataType: string
+		lineageTag: 168b8ca2-7411-4cdb-881f-86a6388c9c55
+		summarizeBy: none
+		sourceColumn: NumVotesRT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Director
+		dataType: string
+		lineageTag: f6d83552-d8dc-492c-a3e5-476864214aa1
+		summarizeBy: none
+		sourceColumn: Director
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadActor
+		dataType: string
+		lineageTag: a8eb0870-bd32-4d47-a8bd-3dc4533ce4e5
+		summarizeBy: none
+		sourceColumn: LeadActor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column profit
+		dataType: int64
+		formatString: 0
+		lineageTag: bcb5ce98-7bdb-40a0-aea3-419527e30ced
+		summarizeBy: sum
+		sourceColumn: profit
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GenreID
+		dataType: int64
+		formatString: 0
+		lineageTag: 80789fa9-0b49-49f3-a6ac-b23d15518a74
+		summarizeBy: count
+		sourceColumn: GenreID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Merge1 = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(movies_dataset, {"Genre"}, DimGenre, {"GenreName"}, "DimGenre", JoinKind.LeftOuter),
+				    #"Expanded DimGenre" = Table.ExpandTableColumn(Source, "DimGenre", {"GenreID"}, {"DimGenre.GenreID"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded DimGenre",{{"DimGenre.GenreID", "GenreID"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

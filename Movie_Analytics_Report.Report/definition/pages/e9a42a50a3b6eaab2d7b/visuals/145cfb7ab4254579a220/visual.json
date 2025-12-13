@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "145cfb7ab4254579a220",
+  "position": {
+    "x": 22,
+    "y": 350,
+    "z": 3000,
+    "height": 336,
+    "width": 354,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "1. Most Movies Are Rated Between 6.0 and 7.5",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The majority of films cluster within this range, indicating that audiences generally perceive most movies as moderately good. This suggests a stable mid-tier quality level across the dataset, where films tend to be acceptable but not exceptional."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. High Ratings Are Relatively Rare",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ratings above 8.5 show a significant drop in frequency. Only a small number of movies achieve extremely high scores, which highlights that top-tier films—those considered exceptional by audiences—represent a small portion of the overall market."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "3. Low Ratings (<4.0) Exist but Are Minimal",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "There is a small left-tail in the distribution, showing that while poorly rated movies do exist, they represent a very small fraction of all films. Most productions avoid extremely negative reception."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "4. Overall Shape Suggests a Positive Skew Toward Moderate Ratings",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The distribution shows more density in the mid-to-upper range and fewer ratings at extremely low or extremely high values. This pattern reflects audience behaviors where ratings tend to gravitate toward moderate or slightly positive evaluations rather than extremes."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

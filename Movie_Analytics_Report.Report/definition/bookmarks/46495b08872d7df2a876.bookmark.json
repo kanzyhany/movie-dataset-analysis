@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Seasonal Patterns",
+  "name": "46495b08872d7df2a876",
+  "options": {
+    "targetVisualNames": [
+      "e2f9a1db638eb459c1d1"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "7ddb38b664af017a181c",
+    "sections": {
+      "7ddb38b664af017a181c": {
+        "visualContainers": {
+          "e2f9a1db638eb459c1d1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "064154d8cd719d538ac9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "Genre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "053dc1a0903ca461cea4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "movies_dataset (2)"
+                            }
+                          },
+                          "Property": "Global_BoxOfficeUSD"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "38c056fe75c7c7aff67a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "MovieID"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "treemap",
+              "objects": {},
+              "activeProjections": {
+                "Group": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "Genre"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

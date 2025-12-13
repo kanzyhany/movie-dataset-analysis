@@ -1,0 +1,261 @@
+table 'movies_dataset (2)'
+	lineageTag: 767c4a00-8b73-45ab-bcc6-671f6dd1f6c5
+
+	measure ROI = AVERAGE(movies_dataset[Global_BoxOfficeUSD]) / AVERAGE(movies_dataset[BudgetUSD])
+		lineageTag: 38de6df2-d4e0-485d-9d34-4f860355a116
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MovieID
+		dataType: int64
+		formatString: 0
+		lineageTag: 35464fbc-f497-4f33-9c21-a2192bd5e4f6
+		summarizeBy: count
+		sourceColumn: MovieID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 12a1a3b8-2488-4415-9b20-570849c3cc4d
+		summarizeBy: none
+		sourceColumn: Title
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genre
+		dataType: string
+		lineageTag: 1a7e54d5-50c5-4ba4-8f2d-bd961e450211
+		summarizeBy: none
+		sourceColumn: Genre
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 380193df-4215-4710-b6ef-93e2dbc0f228
+		summarizeBy: sum
+		sourceColumn: ReleaseYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d0f3049a-9f29-45b6-95e9-881d43034b5f
+		summarizeBy: none
+		sourceColumn: ReleaseDate
+
+		variation Variation
+			isDefault
+			relationship: a44e80c8-8043-40b6-93bc-a3296764e0ec
+			defaultHierarchy: LocalDateTable_5bdd2c16-8ba3-4e23-a4f5-1dff179b0212.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Country
+		dataType: string
+		lineageTag: ea24a393-dcc7-4cc0-a909-2f1cd3237968
+		summarizeBy: none
+		sourceColumn: Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudgetUSD
+		dataType: double
+		lineageTag: 5a84b3e3-264d-4fc8-a8eb-b10eaccdd9ba
+		summarizeBy: sum
+		sourceColumn: BudgetUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column US_BoxOfficeUSD
+		dataType: double
+		lineageTag: d12e07d0-d0fa-4c0b-8413-e8e192fd078e
+		summarizeBy: sum
+		sourceColumn: US_BoxOfficeUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Global_BoxOfficeUSD
+		dataType: double
+		lineageTag: a8e1b192-09dc-4bd2-b8ea-0ac39f0b8fd0
+		summarizeBy: sum
+		sourceColumn: Global_BoxOfficeUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Opening_Day_SalesUSD
+		dataType: double
+		lineageTag: 2afbf73a-18da-4777-95bb-80f59a2a27ab
+		summarizeBy: sum
+		sourceColumn: Opening_Day_SalesUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column One_Week_SalesUSD
+		dataType: double
+		lineageTag: 669b4d0c-e4d0-4a77-a063-91083aa86a2a
+		summarizeBy: sum
+		sourceColumn: One_Week_SalesUSD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IMDbRating
+		dataType: double
+		lineageTag: a4b0b841-3e5a-49c2-a82d-69802839c232
+		summarizeBy: sum
+		sourceColumn: IMDbRating
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RottenTomatoesScore
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fef5904-9667-4d06-8f12-656646b68cb2
+		summarizeBy: sum
+		sourceColumn: RottenTomatoesScore
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumVotesIMDb
+		dataType: int64
+		formatString: 0
+		lineageTag: 524c9d4e-23d1-45fd-9dbd-f1a94236fb1a
+		summarizeBy: sum
+		sourceColumn: NumVotesIMDb
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumVotesRT
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ba6be3b-9e86-4aea-bc09-01e633fbe9ae
+		summarizeBy: sum
+		sourceColumn: NumVotesRT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Director
+		dataType: string
+		lineageTag: 105d4f56-d72b-46af-b3fd-c918727c37d7
+		summarizeBy: none
+		sourceColumn: Director
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadActor
+		dataType: string
+		lineageTag: 27627913-6fb9-465e-b478-c8ccc9efd5cf
+		summarizeBy: none
+		sourceColumn: LeadActor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReleaseMonth
+		dataType: string
+		lineageTag: f2683ebe-b9e1-4a27-b49e-3966e24ab401
+		summarizeBy: none
+		sourceColumn: ReleaseMonth
+		sortByColumn: MonthNumber
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 29e5992a-7348-4610-aa8e-83e3728ae995
+		summarizeBy: sum
+		sourceColumn: MonthNumber
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Decade = INT('movies_dataset (2)'[ReleaseYear]/10)*10 & "s"
+		lineageTag: 2b49f643-8f7d-41cd-8ee3-bb62b32fa1e4
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'movies_dataset (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\DataEngineering\movie-dataset-analysis\movies_dataset.csv"),[Delimiter=",", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"MovieID", Int64.Type}, {"Title", type text}, {"Genre", type text}, {"ReleaseYear", Int64.Type}, {"ReleaseDate", type text}, {"Country", type text}, {"BudgetUSD", type number}, {"US_BoxOfficeUSD", type number}, {"Global_BoxOfficeUSD", type number}, {"Opening_Day_SalesUSD", type number}, {"One_Week_SalesUSD", type number}, {"IMDbRating", type number}, {"RottenTomatoesScore", Int64.Type}, {"NumVotesIMDb", Int64.Type}, {"NumVotesRT", Int64.Type}, {"Director", type text}, {"LeadActor", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each true),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Filtered Rows",{{"ReleaseDate", type date}}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Changed Type1", {"ReleaseDate"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Removed Errors", "ReleaseDate", "ReleaseDate - Copy"),
+				    #"Extracted Month Name" = Table.TransformColumns(#"Duplicated Column", {{"ReleaseDate - Copy", each Date.MonthName(_), type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Extracted Month Name",{{"ReleaseDate - Copy", "ReleaseMonth"}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Renamed Columns", "ReleaseMonth", "ReleaseMonth - Copy"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Duplicated Column1",{{"ReleaseMonth - Copy", type date}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type2",{"ReleaseMonth - Copy"}),
+				    #"Duplicated Column2" = Table.DuplicateColumn(#"Removed Columns", "ReleaseDate", "ReleaseDate - Copy"),
+				    #"Extracted Month" = Table.TransformColumns(#"Duplicated Column2",{{"ReleaseDate - Copy", Date.Month, Int64.Type}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Extracted Month",{{"ReleaseDate - Copy", "MonthNumber"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

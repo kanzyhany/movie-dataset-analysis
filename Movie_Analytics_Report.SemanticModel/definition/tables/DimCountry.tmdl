@@ -1,0 +1,70 @@
+table DimCountry
+	lineageTag: 14162fe7-ce47-422b-a107-6ee4a3f5fab2
+
+	column MovieID
+		dataType: int64
+		formatString: 0
+		lineageTag: 14cd721c-c973-4e23-b05e-60a434b4a094
+		summarizeBy: none
+		sourceColumn: MovieID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryName
+		dataType: string
+		lineageTag: f12ba359-56e2-4b28-bc7a-0ffe3dbb7bf0
+		summarizeBy: none
+		sourceColumn: CountryName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 445b7875-ed3f-4cd2-b77c-34f5b45462de
+		summarizeBy: none
+		sourceColumn: CountryID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Release Year'
+		type: calculated
+		lineageTag: 98737366-6dd1-41ee-a8fb-1cf3ab6f4fd2
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a column name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
+
+	partition DimCountry = m
+		mode: import
+		source =
+				let
+				    Source = movies_dataset,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Title", "Genre", "ReleaseYear", "ReleaseDate", "BudgetUSD", "US_BoxOfficeUSD", "Global_BoxOfficeUSD", "Opening_Day_SalesUSD", "One_Week_SalesUSD", "IMDbRating", "RottenTomatoesScore", "NumVotesIMDb", "NumVotesRT", "Director", "LeadActor", "profit"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns", {{"Country", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "Country"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Country", type text}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"Country", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Country", Text.Clean, type text}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Cleaned Text", {"Country"}),
+				    #"Added Index" = Table.AddIndexColumn(#"Removed Duplicates", "Index", 1, 1, Int64.Type),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Index",{{"Index", "CountryID"}, {"Country", "CountryName"}})
+				in
+				    #"Renamed Columns"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

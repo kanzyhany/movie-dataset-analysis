@@ -1,0 +1,30 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["movies_dataset","DimDate","DimGenre","DimCountry","Merge1","FactMovies","movies_dataset (2)"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table movies_dataset
+ref table DateTableTemplate_28b1fd72-6bbc-4650-abba-c5c63247de90
+ref table LocalDateTable_5a70b45c-dc1e-4c3b-b5a3-70ca6e4583b8
+ref table DimDate
+ref table LocalDateTable_8d5f0ccd-1edc-4dce-b7bd-1f5538c52017
+ref table DimGenre
+ref table DimCountry
+ref table Merge1
+ref table LocalDateTable_41600b25-6ffb-4d98-af05-973c1eec71cb
+ref table FactMovies
+ref table LocalDateTable_26d53fa5-0818-4379-be70-282a585adb45
+ref table 'movies_dataset (2)'
+ref table LocalDateTable_5bdd2c16-8ba3-4e23-a4f5-1dff179b0212
+
+ref cultureInfo en-US
+

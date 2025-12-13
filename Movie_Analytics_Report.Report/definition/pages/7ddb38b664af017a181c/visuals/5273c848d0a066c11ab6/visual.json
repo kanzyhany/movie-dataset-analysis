@@ -1,0 +1,117 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "5273c848d0a066c11ab6",
+  "position": {
+    "x": 0,
+    "y": 292.0260950605778,
+    "z": 9,
+    "height": 242.94607908401011,
+    "width": 1152.1533750499268,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "movies_dataset (2)"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "ReleaseDate"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Year"
+                }
+              },
+              "queryRef": "movies_dataset (2).ReleaseDate.Variation.Date Hierarchy.Year",
+              "nativeQueryRef": "ReleaseDate Year",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "movies_dataset (2)"
+                        }
+                      },
+                      "Property": "US_BoxOfficeUSD"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(movies_dataset (2).US_BoxOfficeUSD)",
+              "nativeQueryRef": "Sum of US_BoxOfficeUSD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "movies_dataset (2)"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "ReleaseDate"
+                      }
+                    },
+                    "Hierarchy": "Date Hierarchy"
+                  }
+                },
+                "Level": "Year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'US Box Office Revenue Over Years'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

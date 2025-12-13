@@ -1,0 +1,85 @@
+table DimDate
+	lineageTag: dfe25a50-0d63-434c-bd37-ab1b825fe799
+
+	column ReleaseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 860be531-acd5-451a-9089-7ecb833d812d
+		summarizeBy: none
+		sourceColumn: ReleaseDate
+
+		variation Variation
+			isDefault
+			relationship: 663d117e-ace1-480b-9beb-c084ac79836d
+			defaultHierarchy: LocalDateTable_8d5f0ccd-1edc-4dce-b7bd-1f5538c52017.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 2405dd1c-54d4-45ae-9476-b6520895226f
+		summarizeBy: sum
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: c92d8d68-4532-4924-a3e2-342eafdbf704
+		summarizeBy: sum
+		sourceColumn: MonthNumber
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: cc5f244c-da21-44eb-b090-25551efb5f54
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		dataType: string
+		lineageTag: f2797514-689d-44dd-a009-d2f95213f0cb
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = movies_dataset,
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"MovieID", "Title", "Genre", "ReleaseYear", "Country", "BudgetUSD", "US_BoxOfficeUSD", "Global_BoxOfficeUSD", "Opening_Day_SalesUSD", "One_Week_SalesUSD", "IMDbRating", "RottenTomatoesScore", "NumVotesIMDb", "NumVotesRT", "Director", "LeadActor", "profit"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns"),
+				    #"Inserted Year" = Table.AddColumn(#"Removed Duplicates", "Year", each Date.Year([ReleaseDate]), Int64.Type),
+				    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month", each Date.Month([ReleaseDate]), Int64.Type),
+				    #"Renamed Columns" = Table.RenameColumns(#"Inserted Month",{{"Month", "MonthNumber"}}),
+				    #"Inserted Month Name" = Table.AddColumn(#"Renamed Columns", "Month Name", each Date.MonthName([ReleaseDate]), type text),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Month Name",{{"Month Name", "MonthName"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "YearMonth", each Date.ToText([ReleaseDate], "yyyy-MM"))
+				in
+				    #"Added Custom"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
