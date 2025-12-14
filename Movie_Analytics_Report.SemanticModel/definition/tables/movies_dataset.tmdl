@@ -210,7 +210,7 @@ table movies_dataset
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("D:\chrome downloads\DATAENG2\archive\movies_dataset.csv"),[Delimiter=",", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\Daniel Nagy\Downloads\movies_dataset.csv"),[Delimiter=",", Columns=17, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Inserted Parsed Date" = Table.AddColumn(#"Promoted Headers", "Parse", each Date.From(DateTimeZone.From([ReleaseDate])), type date),
 				    #"Removed Columns" = Table.RemoveColumns(#"Inserted Parsed Date",{"Parse"}),

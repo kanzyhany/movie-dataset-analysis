@@ -17,24 +17,13 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "movies_dataset (2)"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "ReleaseDate"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "movies_dataset (2)"
                     }
                   },
-                  "Level": "Year"
+                  "Property": "ReleaseDate"
                 }
               },
               "queryRef": "movies_dataset (2).ReleaseDate.Variation.Date Hierarchy.Year",
@@ -94,24 +83,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "movies_dataset (2)"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "ReleaseDate"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Entity": "movies_dataset (2)"
                   }
                 },
-                "Level": "Year"
+                "Property": "ReleaseDate"
               }
             },
             "direction": "Ascending"

@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "movies_dataset"
+                      "Entity": "DimDate"
                     }
                   },
-                  "Property": "ReleaseYear"
+                  "Property": "Year"
                 }
               },
-              "queryRef": "movies_dataset.ReleaseYear",
-              "nativeQueryRef": "ReleaseYear",
+              "queryRef": "DimDate.Year",
+              "nativeQueryRef": "Year",
               "active": true
             }
           ]
@@ -193,6 +193,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "ReleaseYear",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

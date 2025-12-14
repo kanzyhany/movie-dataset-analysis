@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "d8cb9aaec829bb754b39",
+  "name": "71fef61f13f08afbf6b8",
   "position": {
-    "x": 18.333333333333336,
-    "y": 285,
-    "z": 4000,
-    "height": 161.66666666666669,
-    "width": 256.66666666666669,
-    "tabOrder": 4000
+    "x": 959.92357296393607,
+    "y": 105.16360162407452,
+    "z": 10002,
+    "height": 69.70145689037497,
+    "width": 258.01767375208982,
+    "tabOrder": 10002
   },
   "visual": {
     "visualType": "slicer",
@@ -20,49 +20,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "movies_dataset"
+                      "Entity": "DimDate"
                     }
                   },
-                  "Property": "Genre"
+                  "Property": "Year"
                 }
               },
-              "queryRef": "movies_dataset.Genre",
-              "nativeQueryRef": "Genre",
+              "queryRef": "DimDate.Year",
+              "nativeQueryRef": "Year",
               "active": true
             }
           ]
         }
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "movies_dataset.Genre"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "movies_dataset"
-                    }
-                  },
-                  "Property": "Genre"
-                }
-              }
-            ],
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -70,31 +41,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F0F0F0'"
-                    }
-                  }
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -104,6 +51,13 @@
       "general": [
         {
           "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
             "outlineColor": {
               "solid": {
                 "color": {
@@ -112,6 +66,13 @@
                       "Value": "'#F0F0F0'"
                     }
                   }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
                 }
               }
             }
@@ -131,6 +92,35 @@
           }
         }
       ],
+      "items": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F0F0F0'"
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
       "header": [
         {
           "properties": {
@@ -142,6 +132,13 @@
                       "Value": "'#F0F0F0'"
                     }
                   }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -162,12 +159,40 @@
             }
           }
         }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
-    },
-    "syncGroup": {
-      "groupName": "Genre",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

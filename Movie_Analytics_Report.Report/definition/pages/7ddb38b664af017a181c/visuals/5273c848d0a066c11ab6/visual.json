@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 292.0260950605778,
-    "z": 9,
+    "z": 6000,
     "height": 242.94607908401011,
     "width": 1152.1533750499268,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -17,24 +17,13 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "movies_dataset (2)"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "ReleaseDate"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "movies_dataset (2)"
                     }
                   },
-                  "Level": "Year"
+                  "Property": "ReleaseDate"
                 }
               },
               "queryRef": "movies_dataset (2).ReleaseDate.Variation.Date Hierarchy.Year",
@@ -71,24 +60,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "movies_dataset (2)"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "ReleaseDate"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Entity": "movies_dataset (2)"
                   }
                 },
-                "Level": "Year"
+                "Property": "ReleaseDate"
               }
             },
             "direction": "Ascending"
